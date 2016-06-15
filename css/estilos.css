@@ -1,0 +1,205 @@
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  color: #151515;
+}
+
+a {
+    color: #151515;
+}
+
+header{
+  background: #273B47;
+  height: 50px;
+  display: flex;  /*uso de flexbox que ayuda al posicionamento de una manera mas efectiva*/
+  justify-content: space-between; /*divide el espacio entre sus elemntos*/
+  align-items: center;/*centra a todo lo que este dentro de header de manera vertical, se puede notar en el logo*/
+  padding-left: 10px; /*separa el logo 10px en su lado izquierdo*/
+}
+
+.header-right{
+  height: inherit;
+  display: flex;
+  align-items: center;
+}
+
+nav {
+
+  height: 50px;
+    /*background: purple;*/
+    /*float: right;        posicionamiento con float*/
+    /*position: absolute;
+    right: 0;
+    top: 0;                posicionamiento con position: absolute*/
+}
+
+nav ul {
+  display: flex; /*pone los elementos del nav uno al costado del otro*/
+  margin: 0;
+  height: inherit; /*herada el alto de su padre*/
+}
+
+nav li{
+  list-style: none;
+  height: inherit; /*hereda el alto de su padre*/
+  /*margin: 0 10px;*/
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+nav li:after {
+  content: "|";
+  display: inline-block;/*se aplica el display: block para poder usar margenes*/
+  /*margin: 0 10px;*/
+  }
+
+nav li:last-child:after{
+  content: "";
+}
+
+.header-right .button {
+  margin: 0 10px;
+}
+.button{
+  background: #FF4842;
+  text-decoration: none;
+  border-bottom: 3px solid #D0272A;
+  padding: 6px 15px;
+  color: white;
+  font-size: 1em;
+  border-radius: 3px;
+  /*transition: .2s;*/
+
+}
+
+.button:hover{
+  background: #7DCD40;
+  border-bottom: 3px solid #6DAE33;
+}
+
+.button:active{
+  transform: scale(.97);
+}
+
+
+.is-active {
+    box-shadow: inset 0px 5px 0px #7DCD40;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  height: inherit;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+
+nav a:hover{
+  /*border-top: 5px solid orange;*/
+  /*box-shadow donde se ubica la sombra, x, y, difuminado, color;*/
+  box-shadow:inset 0px 5px 0px #FF4842 ;/*aplicando el mismo efecto del borde solo que con sombras y no modifica el modelo de caja*/
+}
+
+h1 {
+  margin: 0 0 15px; 0;
+  font-weight: 600;
+}
+.portada {
+  /*border: 5px solid red;*/
+  position: relative;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  
+}
+.portada .description {
+  background: rgba(255, 255, 255, .7);
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
+  padding: 20px;
+}
+
+.blog {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.blog-items {
+  display: flex; /*pone los elementos alado de otro*/
+  flex-wrap: wrap;/*hace que los elemntos caigan al no tener mas espacio disponible*/
+  justify-content: space-between;
+}
+
+
+.blog-items h3 {
+  font-weight: 400;
+  margin: 5px 0 25px 0;
+}
+
+.item-blog {
+  width: 300px;
+
+}
+
+.item-blog .description{
+  margin-bottom: 15px;
+}
+
+.paginador {
+  display: flex;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  color: #666;
+  width: 1000px;
+  margin: 1.5em 0 3em;
+
+  /*margin: 0 auto;*/
+  text-align: center;
+}
+
+.paginador a {
+  background: #eaeaea;
+  border: 1px solid #ccc;
+  font-weight: bold;
+  margin-left: 1em;
+  text-decoration: none;
+  padding: .5em .7em;
+}
+
+.paginador ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.paginador li{
+  /*align-items: center;*/
+}
+
+.selected {
+  margin-left: 1em;
+}
+
+.autor{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1em;
+  border-top: 1px solid black;
+  padding-top: 10px;
+}
+
+.autor p {
+  margin: 0;
+}
+
+
+
+.img-autor {
+  border-radius: 50%;
+  vertical-align: middle;
+
+}
